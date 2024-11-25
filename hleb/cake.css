@@ -1,0 +1,301 @@
+/* Общий сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+    .cards-container {
+      grid-template-columns: repeat(2, 1fr); /* Две карточки в ряд */
+    }
+  }
+  
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .auth-buttons {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.intro-section {
+    text-align: center;
+    /* Центрирует текст */
+    margin: 50px auto;
+    /* Добавляет отступы сверху и снизу */
+    max-width: 800px;
+    /* Ограничивает ширину текста */
+}
+
+.intro-section .yellow-line {
+    width: 500px;
+    /* Ширина полоски */
+    height: 3px;
+    /* Высота полоски */
+    background-color: #f4a460;
+    /* Жёлтый цвет */
+    margin: 0 auto 60px;
+    /* Центрирует полоску и добавляет отступ снизу */
+}
+
+.intro-section h2 {
+    font-size: 1.8rem;
+    color: #000;
+    margin-bottom: 15px;
+    /* Отступ под заголовком */
+}
+
+.intro-section p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    /* Интерлиньяж для удобства чтения */
+    margin: 0 auto;
+    /* Центрирует текст */
+}
+
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    /* Высота блока на весь экран */
+    background: url('img/Group\ 11.png') center/cover no-repeat;
+    /* Путь к изображению */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Прозрачный фон */
+}
+
+.nav-bar ul {
+    flex-grow: 1;
+    /* Заполняет оставшееся пространство */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    /* Центрирует меню */
+    gap: 200px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-bar a:hover {
+    color: #f4a460;
+    /* Цвет при наведении */
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons .login,
+.auth-buttons .register {
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+.auth-buttons .register {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.auth-buttons button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.hero-content {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 200px;
+}
+
+.hero-content h1 {
+    font-size: 7rem;
+}
+/* Секция */
+.bread-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff; /* Белый фон */
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .section-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  
+  /* Контейнер для карточек */
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Три столбца */
+    gap: 20px; /* Расстояние между карточками */
+    justify-content: center; /* Центрируем сетку по горизонтали */
+  }
+  
+  /* Карточка */
+  .card {
+    background-color: #fef7e6; /* Нежный бежевый фон */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Увеличение тени */
+  }
+  
+  .card-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .card-button {
+    background-color: #ffc107; /* Золотой цвет */
+    color: #ffffff;
+    font-size: 1.2rem; /* Размер текста */
+    font-weight: bold; /* Жирный текст */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card-button:hover {
+    background-color: #ff9800; /* Оранжевый при наведении */
+    color: #fff;
+  }
+  .site-footer {
+    background-color: #f4f4f4;
+    /* Светло-серый фон */
+    padding: 20px 10px;
+    /* Внутренние отступы */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    /* На всю ширину */
+}
+
+.footer-yellow-line {
+    height: 3px;
+    background-color: #f4a460;
+    /* Жёлтая полоска */
+    width: 100%;
+    /* На всю ширину страницы */
+    margin-bottom: 20px;
+    /* Отступ под полоской */
+}
+
+.footer-content {
+    background: #fff; /* Белый фон */
+    color: #000; /* Черный текст */
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 30px 20px;
+    display: flex; /* Flexbox для расположения элементов в строку */
+    justify-content: space-between; /* Равное расстояние между блоками */
+    align-items: flex-start; /* Верхнее выравнивание */
+  }
+  
+  /* Список в колонку */
+  .footer-menu {
+      list-style: none;
+      flex: 1;
+      text-align: left;
+      /* Убирает маркеры списка */
+      padding: 0;
+      margin: 0;
+  }
+  
+  .footer-menu li {
+      margin-bottom: 10px;
+      /* Отступы между пунктами */
+  }
+  
+  .footer-menu a {
+      text-decoration: none;
+      /* Убирает подчеркивание ссылок */
+      color: #333;
+      /* Цвет текста ссылок */
+      font-size: 1rem;
+  }
+  
+  .footer-menu a:hover {
+      color: #f4a460;
+      /* Цвет при наведении */
+  }
+  
+  /* Стили для логотипа */
+  
+  .footer-logo {
+    flex: 0; /* Оставляем лого фиксированной ширины */
+    text-align: left  ; /* Выравнивание текста и лого вправо */
+  }
+  
+  .footer-logo img {
+      width: 100px;
+      /* Ограничение ширины логотипа */
+      height: auto;
+      /* Сохраняет пропорции */
+  
+  }
+  .logo-text {
+    font-size: 0.9rem; /* Размер текста под логотипом */
+    color: #000000; /* Серый цвет текста */
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
